@@ -1,7 +1,7 @@
 # 1. 创建模板
 
 1. 找到要做模板的仓库 👉 Settings → General → ✅Template repository
-2. 返回仓库主页，出现 ![](https://img.shields.io/badge/Use_this_template_▾-2EA44F?style=for-the-badge)（说明可被作为模板）
+2. 返回仓库主页，出现 ![](https://img.shields.io/badge/Use_this_template_▾-2EA44F?style=flat)（说明可被作为模板）
 
 # 2. 使用模板创建新仓库
 
