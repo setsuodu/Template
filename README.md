@@ -11,3 +11,8 @@
   - 默认只复制 main/master 分支。
   - 勾选后会把模板的所有分支都复制过来（一般不需要）。
 4. 点击 “Create repository from template”。
+
+# 3. 功能
+
+1. CI 自动构建多平台包（docker镜像、steam用的DedicatedServer.exe）
+2. src结构，Dockerfile上下文准确
