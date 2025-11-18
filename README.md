@@ -12,7 +12,20 @@
   - 勾选后会把模板的所有分支都复制过来（一般不需要）。
 4. 点击 “Create repository from template”。
 
-# 3. 功能
+# 3. 本模板功能
 
 1. CI 自动构建多平台包（docker镜像、steam用的DedicatedServer.exe）
 2. src结构，Dockerfile上下文准确
+```
+cd ..\ServerSamples\StandardAPI
+dotnet new sln -n StandardAPI
+mkdir src && cd src
+
+dotnet new webapi -n ApiGateway -o ApiGateway
+dotnet new webapi -n WebApi -o WebApi
+
+cd ..
+dotnet sln add src/ApiGateway/ApiGateway.csproj
+dotnet sln add src/WebApi/WebApi.csproj
+````
+3. Unity自动构建AA/AB
