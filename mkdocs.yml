@@ -4,8 +4,8 @@ nav:
     - Home: index.md
     - 概念: concepts/intro.md
     - 项目:
-        - 客户端: projects/Client.md
-        - 访问端: projects/Server.md
+        - 客户端: projects/client.md
+        - 访问端: projects/server.md
 theme:
     name: material # 使用 MkDocs-Material 主题
     # ... 其他主题配置，如颜色、字体等
