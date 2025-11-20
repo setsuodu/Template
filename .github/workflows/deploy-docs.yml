@@ -1,0 +1,37 @@
+# .github/workflows/ci.yml
+
+name: Deploy MkDocs Documentation
+
+on:
+  # 触发器：在推送到主分支时运行
+  push:
+    branches:
+      - master # 请根据您的主分支名称修改 (可能是 main 或 master)
+  # 允许您手动从 GitHub Actions 界面触发工作流
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # 这一行是关键：获取完整的历史记录，MkDocs-Material 需要它来处理版本信息等
+          fetch-depth: 0
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x # 使用任何最新的 Python 3 版本
+
+      - name: Install MkDocs and Dependencies
+        run: |
+          pip install mkdocs-material 
+          # 如果使用了 Obsidian 相关的插件，也在这里安装
+          # pip install mkdocs-for-obsidian
+
+      - name: Deploy MkDocs to GitHub Pages
+        # 使用 MkDocs-Material 内置的 gh-deploy 命令
+        run: mkdocs gh-deploy --force
