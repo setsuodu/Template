@@ -19,6 +19,7 @@ mkdir ProjectSettings
 mkdir Logs
 
 :: 2. 创建 Packages/manifest.json 文件 (定义依赖)
+:: 若不写这么大一段，Unity初次启动项目，会自动生成更多（再多10+个）
 echo 2. 配置 Packages/manifest.json 依赖 (包含 UGUI 和 VS 集成)...
 (
     echo {
@@ -27,8 +28,40 @@ echo 2. 配置 Packages/manifest.json 依赖 (包含 UGUI 和 VS 集成)...
     echo     "com.unity.ugui": "1.0.0",
     echo     "com.unity.test-framework": "1.1.33",
     echo     "com.unity.modules.ui": "1.0.0"
-    echo   },
-    echo   "testables": []
+	echo	 "com.unity.ide.visualstudio": "2.0.25",
+	echo	 "com.unity.ugui": "1.0.0",
+	echo	 "com.unity.modules.ai": "1.0.0",
+	echo	 "com.unity.modules.androidjni": "1.0.0",
+	echo	 "com.unity.modules.animation": "1.0.0",
+	echo	 "com.unity.modules.assetbundle": "1.0.0",
+	echo	 "com.unity.modules.audio": "1.0.0",
+	echo	 "com.unity.modules.cloth": "1.0.0",
+	echo	 "com.unity.modules.director": "1.0.0",
+	echo	 "com.unity.modules.imageconversion": "1.0.0",
+	echo	 "com.unity.modules.imgui": "1.0.0",
+	echo	 "com.unity.modules.jsonserialize": "1.0.0",
+	echo	 "com.unity.modules.particlesystem": "1.0.0",
+	echo	 "com.unity.modules.physics": "1.0.0",
+	echo	 "com.unity.modules.physics2d": "1.0.0",
+	echo	 "com.unity.modules.screencapture": "1.0.0",
+	echo	 "com.unity.modules.terrain": "1.0.0",
+	echo	 "com.unity.modules.terrainphysics": "1.0.0",
+	echo	 "com.unity.modules.tilemap": "1.0.0",
+	echo	 "com.unity.modules.ui": "1.0.0",
+	echo	 "com.unity.modules.uielements": "1.0.0",
+	echo	 "com.unity.modules.umbra": "1.0.0",
+	echo	 "com.unity.modules.unityanalytics": "1.0.0",
+	echo	 "com.unity.modules.unitywebrequest": "1.0.0",
+	echo	 "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+	echo	 "com.unity.modules.unitywebrequestaudio": "1.0.0",
+	echo	 "com.unity.modules.unitywebrequesttexture": "1.0.0",
+	echo	 "com.unity.modules.unitywebrequestwww": "1.0.0",
+	echo	 "com.unity.modules.vehicles": "1.0.0",
+	echo	 "com.unity.modules.video": "1.0.0",
+	echo	 "com.unity.modules.vr": "1.0.0",
+	echo	 "com.unity.modules.wind": "1.0.0",
+	echo	 "com.unity.modules.xr": "1.0.0"
+    echo   }
     echo }
 ) > Packages\manifest.json
 

@@ -1,3 +1,7 @@
+# Pages
+
+https://setsuodu.github.io/Template/
+
 # 1. 创建模板
 
 1. 找到要做模板的仓库 👉 Settings → General → ✅Template repository
